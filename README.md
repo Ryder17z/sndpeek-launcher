@@ -15,7 +15,7 @@ This is a configurable launcher script which is easily modified.
 The sndpeek-launcher is easily configured in any text or code editor of your choice.
 
 
-Script Version: 0.6
+Script Version: 0.6.1
 Documentation Version: 0.4
 
 The launcher is essentially just a script with different sections.
@@ -34,7 +34,7 @@ For example, here is the reference section:
                   rotatem|rotatek|begintime|ds
    other options: nodisplay|print
 
-:: << END OF CONFIG SETUP >>
+:: << CONFIG SETUP >>
 ```
 ----------
 Lets for example turn off the blue waveform by default:

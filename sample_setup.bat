@@ -2,7 +2,7 @@
 @echo off
 if not "%1" == "max" start /MAX cmd /c %0 max & exit/b
 echo Launching sndppek with a sample configuration:
-:: << END OF STARTUP >>
+:: << STARTUP >>
 
 :: >> CONFIG << (HINT: SEE "CONFIG SETUP" SECTION)
 
@@ -56,26 +56,26 @@ set INTERNAL_nodisplay=false
 set INTERNAL_print=false
 :: WARNING: THESE OPTIONS ARE UNDEFINED!
 
-:: << END OF CONFIG >>
+:: << CONFIG >>
 
 :: >> PRINT CONFIG <<
-echo %fullscreen% %freeze%   
+echo %fullscreen% %freeze%
 echo %waveform% %lissajous% %waterfall% %spacing%
 echo %fallingcolors% %dB% %backward% %features%
 echo.
 echo %timescale% %freqscale% %lissscale%
-echo %zpos% %dzpos% %logfactor% 
+echo %zpos% %dzpos% %logfactor%
 echo.
 echo %begintime% %showtime%
 echo %preview% %depth% %yview%
 echo %rotatem% %rotatek% %ds%
 echo.
 echo.
-:: << END OF PRINT CONFIG >>
+:: << PRINT CONFIG >>
 
 :: >> CONTINUE <<
 goto init
-:: << END OF CONTINUE >>
+:: << CONTINUE >>
 
 :: >> CONFIG SETUP << (REFERENCE SECTION)
 
@@ -89,12 +89,12 @@ goto init
                   rotatem|rotatek|begintime|ds
    other options: nodisplay|print
 
-:: << END OF CONFIG SETUP >>
+:: << CONFIG SETUP >>
 
 :: >> INITIALIZE << (DO THE NECESSARY SETUP)
 :init
 set CONFIG=%fullscreen% %waveform% %lissajous% %waterfall% %dB% %features% %fallingcolors% %backward% %showtime% %freeze% %timescale% %freqscale% %lissscale% %logfactor% %spacing% %zpos% %dzpos% %depth% %preview% %yview% %rotatem% %rotatek% %begintime% %ds%
-:: << END OF INITIALIZE <<
+:: << INITIALIZE <<
 
 :: >> EXECUTE << (LAUNCH SNDPEEK WITH THE PROVIDED CONFIGURATION)
 if /I '%INTERNAL_nodisplay%' == 'true' (
@@ -111,4 +111,4 @@ if /I '%INTERNAL_nodisplay%' == 'true' (
       sndpeek.exe %CONFIG%
    )
 )
-:: >> END OF EXECUTE <<
+:: >> EXECUTE <<
